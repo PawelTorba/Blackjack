@@ -6,6 +6,7 @@ Game::Game() : player(1000) {}
 
 void Game::main_loop() {
     bool play_again = true;
+    player.update_balance(player.get_balance() * (-1) + 1000);
 
     std::cout << "=== BLACKJACK ===\n";
 
@@ -19,7 +20,6 @@ void Game::main_loop() {
 
         std::cout << "\n--- Nowa runda ---\n";
         std::cout << "Saldo gracza: " << player.get_balance() << "\n";
-
 
         int bet = player.bet();
         if (bet == 0) continue;

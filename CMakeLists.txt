@@ -12,6 +12,7 @@ add_executable(BlackJackGUI
     dealer.cpp
     card.cpp
     deck.cpp
+    game.cpp
 )
 
 target_link_libraries(BlackJackGUI
