@@ -182,3 +182,21 @@ void Database::clearDatabase() {
         sqlite3_free(errMsg);
     }
 }
+
+bool Database::deleteGameById(int gameId) {
+    std::string sql =
+        "DELETE FROM round WHERE game_id = " + std::to_string(gameId) + ";"
+        "DELETE FROM game_session WHERE id = " + std::to_string(gameId) + ";";
+
+    char* errMsg = nullptr;
+    int rc = sqlite3_exec(db, sql.c_str(), nullptr, nullptr, &errMsg);
+
+    if (rc != SQLITE_OK) {
+        if (errMsg) {
+            std::cerr << errMsg << std::endl;
+            sqlite3_free(errMsg);
+        }
+        return false;
+    }
+    return true;
+}

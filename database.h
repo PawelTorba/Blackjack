@@ -42,6 +42,7 @@ public:
     void addRound(int gameId, int roundNumber, int result);
 
     void clearDatabase();
+    bool deleteGameById(int gameId);
 
     Stats getStats();
 };
