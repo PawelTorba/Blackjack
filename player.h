@@ -8,13 +8,14 @@ class Player : public Dealer{
         int balance;
     public:
         void update_balance(int value);
-        void double_down(); //TO DO
-        void surrender(); //TO DO
         int get_balance(); 
         Player(int balance);
         Player();
         int bet();
         bool hit(Deck& deck);
+        
+        Action getPDecision();
+
     };
 
 #endif

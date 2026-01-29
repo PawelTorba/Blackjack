@@ -4,8 +4,6 @@
 Dealer::Dealer():current_points(0){}
 Dealer::~Dealer(){}
 bool Dealer::hit(Deck& deck){
-    /*GETS THE LAST CARD FROM RANDOMIZED DECK, RETURNS "FALSE" IF SUM OF POIINTS IS 
-    21 OR ABOVE*/
 
     Card popped_card = deck.pop_card();
 
@@ -19,13 +17,9 @@ bool Dealer::hit(Deck& deck){
 bool Dealer::stand(){
     return false;
 }
-bool Dealer::bust(){
-    if (this->current_points > 21) {
-        return false;
-    }
-    else{
-        return true;
-    }
+
+bool Dealer::bust() {
+    return current_points > 21;
 }
 
 void Dealer::update_points(int value){
@@ -38,4 +32,11 @@ void Dealer::reset_points(){
 
 int Dealer::get_points(){
     return this->current_points;
+}
+
+Dealer::Action Dealer::getDecision() {
+        if (this->current_points < 17) {
+        return Dealer::Action::Hit;
+    }
+    return Dealer::Action::Stand;
 }

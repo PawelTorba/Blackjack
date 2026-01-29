@@ -45,3 +45,15 @@ bool Player::hit(Deck& deck){
 
     return bust();
 }
+
+Player::Action getDecision() {
+    while (true) {
+        std::cout << "Wybierz akcję: (h)it lub (s)tand: ";
+        std::string input;
+        std::getline(std::cin, input);
+
+        if (input == "h" || input == "H") return Player::Action::Hit;
+        if (input == "s" || input == "S") return Player::Action::Stand;
+        std::cout << "Nieznana akcja — spróbuj jeszcze raz.\n";
+    }
+}

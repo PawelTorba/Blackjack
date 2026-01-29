@@ -2,6 +2,7 @@
 #define DEALER_H
 
 #include "deck.h"
+#include <string>
 class Dealer{
     protected:
         int current_points;
@@ -12,6 +13,13 @@ class Dealer{
         void update_points(int value);
         void reset_points();
         int get_points();
+
+        enum class Action {
+            Hit,
+            Stand
+        };
+
+        Action getDecision();
 
     Dealer();
     ~Dealer();
