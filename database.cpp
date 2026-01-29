@@ -101,3 +101,84 @@ std::vector<RoundInfo> Database::getRoundsForGame(int gameId) {
     sqlite3_finalize(stmt);
     return rounds;
 }
+
+////STATYSTYKI
+Stats Database::getStats() {
+    Stats s{0, 0, 0, 0, 0.0};
+
+    sqlite3_stmt* stmt;
+
+    // 1. liczba gier
+    sqlite3_prepare_v2(
+        db,
+        "SELECT COUNT(*) FROM game_session;",
+        -1, &stmt, nullptr
+    );
+    if (sqlite3_step(stmt) == SQLITE_ROW)
+        s.gamesCount = sqlite3_column_int(stmt, 0);
+    sqlite3_finalize(stmt);
+
+    if (s.gamesCount == 0)
+        return s;
+
+    // 2. suma rund
+    sqlite3_prepare_v2(
+        db,
+        "SELECT COUNT(*) FROM round;",
+        -1, &stmt, nullptr
+    );
+    if (sqlite3_step(stmt) == SQLITE_ROW)
+        s.roundsCount = sqlite3_column_int(stmt, 0);
+    sqlite3_finalize(stmt);
+
+    // 3. max saldo
+    sqlite3_prepare_v2(
+        db,
+        "SELECT MAX(balance) FROM game_session;",
+        -1, &stmt, nullptr
+    );
+    if (sqlite3_step(stmt) == SQLITE_ROW)
+        s.maxBalance = sqlite3_column_int(stmt, 0);
+    sqlite3_finalize(stmt);
+
+    // 4. min saldo
+    sqlite3_prepare_v2(
+        db,
+        "SELECT MIN(balance) FROM game_session;",
+        -1, &stmt, nullptr
+    );
+    if (sqlite3_step(stmt) == SQLITE_ROW)
+        s.minBalance = sqlite3_column_int(stmt, 0);
+    sqlite3_finalize(stmt);
+
+    // 5. winrate
+    sqlite3_prepare_v2(
+        db,
+        "SELECT COUNT(*) FROM round WHERE result = 1;",
+        -1, &stmt, nullptr
+    );
+    int wins = 0;
+    if (sqlite3_step(stmt) == SQLITE_ROW)
+        wins = sqlite3_column_int(stmt, 0);
+    sqlite3_finalize(stmt);
+
+    if (s.roundsCount > 0)
+        s.winRate = (double)wins / s.roundsCount * 100.0;
+
+    return s;
+}
+
+//czyszczenie bazy danych
+void Database::clearDatabase() {
+    const char* sql =
+        "DELETE FROM round;"
+        "DELETE FROM game_session;";
+
+    char* errMsg = nullptr;
+    sqlite3_exec(db, sql, nullptr, nullptr, &errMsg);
+
+    if (errMsg) {
+        std::cerr << errMsg << std::endl;
+        sqlite3_free(errMsg);
+    }
+}

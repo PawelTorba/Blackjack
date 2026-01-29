@@ -14,7 +14,8 @@ void print_menu() {
     std::cout << "2. Historia gier\n";
     std::cout << "3. Statystyki\n";
     std::cout << "4. Eksport danych\n";
-    std::cout << "5. Wyjście\n";
+    std::cout << "5. Wyczyść historie i statystyki\n";
+    std::cout << "6. Wyjście\n";
     std::cout << "-------------------------\n";
     std::cout << "Wybierz opcję: ";
 }
@@ -83,15 +84,46 @@ void main_menu(Game& game) {
                 break;
             }
 
-        case 3:
-            std::cout << "\n[Statystyki] — w trakcie implementacji.\n";
+        case 3: {
+            auto stats = game.getDatabase().getStats();
+
+            std::cout << "\n=== STATYSTYKI ===\n";
+
+            if (stats.gamesCount == 0) {
+                std::cout << "Brak danych statystycznych.\n";
+                break;
+            }
+
+            std::cout << "Liczba gier: " << stats.gamesCount << "\n";
+            std::cout << "Liczba rund: " << stats.roundsCount << "\n";
+            std::cout << "Najlepsze saldo: " << stats.maxBalance << "\n";
+            std::cout << "Najgorsze saldo: " << stats.minBalance << "\n";
+            std::cout << "Winrate: " << stats.winRate << "%\n";
+
             break;
+        }
 
         case 4:
             std::cout << "\n[Eksport danych] — w trakcie implementacji.\n";
             break;
 
-        case 5:
+        case 5: {
+            std::cout << "\nCzy na pewno chcesz usunąć WSZYSTKIE dane? (t/n): ";
+            char c;
+            std::cin >> c;
+            clear_input();
+
+            if (c == 't' || c == 'T') {
+                game.getDatabase().clearDatabase();
+                std::cout << "Dane zostały usunięte.\n";
+            }
+            else {
+                std::cout << "Anulowano.\n";
+            }
+            break;
+        }
+
+        case 6:
             std::cout << "\nDo zobaczenia!\n";
             running = false;
             break;

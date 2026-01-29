@@ -14,6 +14,15 @@ struct RoundInfo {
     int result;
 };
 
+struct Stats {
+    int gamesCount;
+    int roundsCount;
+    int maxBalance;
+    int minBalance;
+    double winRate;
+};
+
+
 class Database {
 private:
     sqlite3* db;
@@ -31,4 +40,8 @@ public:
     std::vector<RoundInfo> getRoundsForGame(int gameId);
 
     void addRound(int gameId, int roundNumber, int result);
+
+    void clearDatabase();
+
+    Stats getStats();
 };
