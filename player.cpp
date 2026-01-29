@@ -18,7 +18,7 @@ int Player::bet(){
 
     int bet_value = 0;
     //temporary question
-    std::cout << "How much to bet?: " << std::endl;
+    std::cout << "Wpisz stawke: ";
     //
     std::cin >>  bet_value;
     if (bet_value <= this->balance ){
@@ -26,7 +26,7 @@ int Player::bet(){
         return bet_value;
     }
     else {
-        std::cout << "Not enough funds for betting, lower the bet" << std::endl;
+        std::cout << "Brak wystarczających funduszy, zmniejsz stawke." << std::endl;
         return 0;
     }
     return 0;
@@ -46,7 +46,7 @@ bool Player::hit(Deck& deck){
     return bust();
 }
 
-Player::Action getDecision() {
+Player::Action Player::getDecision() {
     while (true) {
         std::cout << "Wybierz akcję: (h)it lub (s)tand: ";
         std::string input;

@@ -14,7 +14,7 @@ class Player : public Dealer{
         int bet();
         bool hit(Deck& deck);
         
-        Action getPDecision();
+        Action getDecision();
 
     };
 

@@ -1,5 +1,9 @@
+#ifndef GAME_H
+#define GAME_H
+
 #include "deck.h"
 #include "player.h"
+#include "dealer.h"
 
 class Game {
 private:
@@ -8,5 +12,8 @@ private:
     Dealer dealer;
 
 public:
+    Game();
     void main_loop();
 };
+
+#endif
