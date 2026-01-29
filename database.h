@@ -22,7 +22,6 @@ struct Stats {
     double winRate;
 };
 
-
 class Database {
 private:
     sqlite3* db;
@@ -38,6 +37,11 @@ public:
 
     std::vector<GameSessionInfo> getGameHistory();
     std::vector<RoundInfo> getRoundsForGame(int gameId);
+    std::vector<GameSessionInfo> getGameHistorySorted(
+        const std::string& orderBy,
+        bool ascending,
+        int minRounds,
+        int minBalance);
 
     void addRound(int gameId, int roundNumber, int result);
 

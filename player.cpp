@@ -12,12 +12,8 @@ int Player::get_balance(){
 }
 
 int Player::bet(){
-    /*PLACES A BET AND SUBTRACTS THE BET VALUE FROM THE PLAYER'S BALANCE
-    RETURNS BET VALUE AS INT*/
-    /*ALSO CHECKS IF THERE IS ENOUGH CREDIT TO PLACE THE BET*/
 
     int bet_value = 0;
-    //temporary question
     std::cout << "Wpisz stawke: ";
     //
     std::cin >>  bet_value;
@@ -33,8 +29,6 @@ int Player::bet(){
 }
 
 bool Player::hit(Deck& deck){
-    /*GETS THE LAST CARD FROM RANDOMIZED DECK, RETURNS "FALSE" IF SUM OF POIINTS IS 
-    21 OR ABOVE*/
 
     Card popped_card = deck.pop_card();
 

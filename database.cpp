@@ -102,13 +102,11 @@ std::vector<RoundInfo> Database::getRoundsForGame(int gameId) {
     return rounds;
 }
 
-////STATYSTYKI
 Stats Database::getStats() {
     Stats s{0, 0, 0, 0, 0.0};
 
     sqlite3_stmt* stmt;
 
-    // 1. liczba gier
     sqlite3_prepare_v2(
         db,
         "SELECT COUNT(*) FROM game_session;",
@@ -121,7 +119,6 @@ Stats Database::getStats() {
     if (s.gamesCount == 0)
         return s;
 
-    // 2. suma rund
     sqlite3_prepare_v2(
         db,
         "SELECT COUNT(*) FROM round;",
@@ -131,7 +128,6 @@ Stats Database::getStats() {
         s.roundsCount = sqlite3_column_int(stmt, 0);
     sqlite3_finalize(stmt);
 
-    // 3. max saldo
     sqlite3_prepare_v2(
         db,
         "SELECT MAX(balance) FROM game_session;",
@@ -141,7 +137,6 @@ Stats Database::getStats() {
         s.maxBalance = sqlite3_column_int(stmt, 0);
     sqlite3_finalize(stmt);
 
-    // 4. min saldo
     sqlite3_prepare_v2(
         db,
         "SELECT MIN(balance) FROM game_session;",
@@ -151,7 +146,6 @@ Stats Database::getStats() {
         s.minBalance = sqlite3_column_int(stmt, 0);
     sqlite3_finalize(stmt);
 
-    // 5. winrate
     sqlite3_prepare_v2(
         db,
         "SELECT COUNT(*) FROM round WHERE result = 1;",
@@ -168,7 +162,6 @@ Stats Database::getStats() {
     return s;
 }
 
-//czyszczenie bazy danych
 void Database::clearDatabase() {
     const char* sql =
         "DELETE FROM round;"
@@ -199,4 +192,35 @@ bool Database::deleteGameById(int gameId) {
         return false;
     }
     return true;
+}
+
+std::vector<GameSessionInfo> Database::getGameHistorySorted(
+    const std::string& orderBy,
+    bool ascending,
+    int minRounds,
+    int minBalance
+) {
+    std::vector<GameSessionInfo> history;
+
+    std::string sql =
+        "SELECT id, rounds_count, balance FROM game_session "
+        "WHERE rounds_count >= " + std::to_string(minRounds) +
+        " AND balance >= " + std::to_string(minBalance) +
+        " ORDER BY " + orderBy +
+        (ascending ? " ASC;" : " DESC;");
+
+    sqlite3_stmt* stmt;
+
+    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) == SQLITE_OK) {
+        while (sqlite3_step(stmt) == SQLITE_ROW) {
+            GameSessionInfo g;
+            g.id = sqlite3_column_int(stmt, 0);
+            g.rounds = sqlite3_column_int(stmt, 1);
+            g.balance = sqlite3_column_int(stmt, 2);
+            history.push_back(g);
+        }
+    }
+
+    sqlite3_finalize(stmt);
+    return history;
 }

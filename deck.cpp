@@ -5,7 +5,6 @@
 Deck::Deck(){}
 
 void Deck::generate_deck(){
-    /*GENERATES A STANDARD 54 CARD DECK - NOT RANDOM*/
     cards.clear();
     std::string colors[4] = {"clubs", "diamonds", "hearts", "spades"};
     
@@ -34,7 +33,6 @@ std::vector<Card>& Deck::get_cards(){
 }
 
 void Deck::shuffle_cards(){
-    /*RANDOMIZES GENERATED DECK*/
     std::random_device rd;
     std::mt19937 gen(rd());
     
@@ -42,7 +40,6 @@ void Deck::shuffle_cards(){
 
 }
 Card Deck::pop_card(){
-    /*POPS LAST CARD FROM THE DECK*/
     Card card_temp = this->cards.back();
     this->cards.pop_back();
     return card_temp;

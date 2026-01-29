@@ -46,13 +46,62 @@ void main_menu(Game& game) {
             break;
 
         case 2: {
-                std::cout << "\n=== HISTORIA GIER ===\n";
+            bool inHistory = true;
 
-                auto history = game.getDatabase().getGameHistory();
+            while (inHistory) {
+                std::cout << "\n=== HISTORIA GIER ===\n";
+                std::cout << "1. Wyświetl gry\n";
+                std::cout << "2. Sortowanie i filtrowanie\n";
+                std::cout << "3. Powrót\n";
+                std::cout << "Wybierz opcję: ";
+
+                int choice;
+                std::cin >> choice;
+                clear_input();
+
+                if (choice == 3) break;
+
+                std::string orderBy = "id";
+                bool ascending = true;
+                int minRounds = 0;
+                int minBalance = -1000000;
+
+                if (choice == 2) {
+                    std::cout << "\nSortuj po:\n";
+                    std::cout << "1. ID\n";
+                    std::cout << "2. Bilans\n";
+                    std::cout << "3. Liczba rund\n";
+                    std::cout << "Wybór: ";
+
+                    int s;
+                    std::cin >> s;
+                    clear_input();
+
+                    if (s == 2) orderBy = "balance";
+                    else if (s == 3) orderBy = "rounds_count";
+
+                    std::cout << "Kolejność (1 = rosnąco, 2 = malejąco): ";
+                    int o;
+                    std::cin >> o;
+                    clear_input();
+                    ascending = (o == 1);
+
+                    std::cout << "Minimalna liczba rund (0 = brak): ";
+                    std::cin >> minRounds;
+                    clear_input();
+
+                    std::cout << "Minimalny bilans (np. 0): ";
+                    std::cin >> minBalance;
+                    clear_input();
+                }
+
+                auto history = game.getDatabase().getGameHistorySorted(
+                    orderBy, ascending, minRounds, minBalance
+                );
 
                 if (history.empty()) {
-                    std::cout << "Brak zapisanych gier.\n";
-                    break;
+                    std::cout << "Brak gier spełniających kryteria.\n";
+                    continue;
                 }
 
                 for (const auto& h : history) {
@@ -66,67 +115,38 @@ void main_menu(Game& game) {
                 std::cin >> id;
                 clear_input();
 
-                if (id == 0)
-                    break;
+                if (id == 0) continue;
 
                 std::cout << "\n1. Usuń grę z historii\n";
                 std::cout << "2. Pokaż rundy\n";
                 std::cout << "3. Powrót\n";
                 std::cout << "Wybierz opcję: ";
 
-                int option;
-                std::cin >> option;
+                int opt;
+                std::cin >> opt;
                 clear_input();
 
-                switch (option) {
-                case 1: {
-                    std::cout << "Czy na pewno chcesz usunąć grę ID "
-                            << id << "? (t/n): ";
+                if (opt == 1) {
+                    std::cout << "Czy na pewno usunąć grę ID " << id << "? (t/n): ";
                     char c;
                     std::cin >> c;
                     clear_input();
-
-                    if (c == 't' || c == 'T') {
-                        if (game.getDatabase().deleteGameById(id))
-                            std::cout << "Gra została usunięta.\n";
-                        else
-                            std::cout << "Błąd podczas usuwania gry.\n";
-                    } else {
-                        std::cout << "Anulowano.\n";
-                    }
-                    break;
+                    if (c == 't' || c == 'T')
+                        game.getDatabase().deleteGameById(id);
                 }
-
-                case 2: {
+                else if (opt == 2) {
                     auto rounds = game.getDatabase().getRoundsForGame(id);
-
-                    if (rounds.empty()) {
-                        std::cout << "Brak rund dla tej gry.\n";
-                        break;
-                    }
-
-                    std::cout << "\nRundy gry " << id << ":\n";
                     for (const auto& r : rounds) {
-                        std::cout << "Runda " << r.roundNumber << " | ";
-
-                        if (r.result == 1) std::cout << "Wygrana";
-                        else if (r.result == 0) std::cout << "Remis";
-                        else std::cout << "Przegrana";
-
-                        std::cout << "\n";
+                        std::cout << "Runda " << r.roundNumber << " | "
+                                << (r.result == 1 ? "Wygrana" :
+                                    r.result == 0 ? "Remis" : "Przegrana")
+                                << "\n";
                     }
-                    break;
                 }
-
-                case 3:
-                    break;
-
-                default:
-                    std::cout << "Nieprawidłowa opcja.\n";
-                }
-
-                break;
             }
+
+            break;
+        }
 
         case 3: {
             auto stats = game.getDatabase().getStats();
