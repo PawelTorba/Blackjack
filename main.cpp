@@ -39,12 +39,49 @@ void main_menu(Game& game) {
 
         switch (choice) {
         case 1:
+            game.startNewGame();
             game.main_loop();
+            game.finishSession();
             break;
 
-        case 2:
-            std::cout << "\n[Historia gier] — w trakcie implementacji.\n";
-            break;
+        case 2: {
+                std::cout << "\n=== HISTORIA GIER ===\n";
+
+                auto history = game.getDatabase().getGameHistory();
+
+                if (history.empty()) {
+                    std::cout << "Brak zapisanych gier.\n";
+                    break;
+                }
+
+                for (const auto& h : history) {
+                    std::cout << "Gra ID: " << h.id
+                            << " | Rundy: " << h.rounds
+                            << " | Bilans końcowy: " << h.balance << "\n";
+                }
+
+                std::cout << "\nPodaj ID gry, aby zobaczyć rundy (0 = powrót): ";
+                int id;
+                std::cin >> id;
+                clear_input();
+
+                if (id == 0) break;
+
+                auto rounds = game.getDatabase().getRoundsForGame(id);
+
+                std::cout << "\nRundy gry " << id << ":\n";
+                for (const auto& r : rounds) {
+                    std::cout << "Runda " << r.roundNumber << " | Wynik: ";
+
+                    if (r.result == 1) std::cout << "Wygrana";
+                    else if (r.result == 0) std::cout << "Remis";
+                    else std::cout << "Przegrana";
+
+                    std::cout << "\n";
+                }
+
+                break;
+            }
 
         case 3:
             std::cout << "\n[Statystyki] — w trakcie implementacji.\n";

@@ -1,9 +1,9 @@
 CMakeFiles/BlackJackGUI.dir/player.cpp.o: \
- /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack/player.cpp \
+ /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack-main/player.cpp \
  /usr/include/stdc-predef.h \
- /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack/player.h \
- /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack/dealer.h \
- /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack/deck.h \
+ /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack-main/player.h \
+ /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack-main/dealer.h \
+ /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack-main/deck.h \
  /usr/include/c++/15.2.1/vector \
  /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -65,7 +65,7 @@ CMakeFiles/BlackJackGUI.dir/player.cpp.o: \
  /usr/include/c++/15.2.1/bits/uses_allocator.h \
  /usr/include/c++/15.2.1/bits/uses_allocator_args.h \
  /usr/include/c++/15.2.1/tuple /usr/include/c++/15.2.1/bits/ranges_util.h \
- /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack/card.h \
+ /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack-main/card.h \
  /usr/include/string.h /usr/include/bits/libc-header-start.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
  /usr/include/strings.h /usr/include/c++/15.2.1/iostream \

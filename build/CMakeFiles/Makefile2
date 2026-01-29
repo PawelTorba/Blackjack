@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack"
+CMAKE_SOURCE_DIR = "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build"
+CMAKE_BINARY_DIR = "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/BlackJackGUI.dir/clean
 CMakeFiles/BlackJackGUI.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BlackJackGUI.dir/build.make CMakeFiles/BlackJackGUI.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BlackJackGUI.dir/build.make CMakeFiles/BlackJackGUI.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles" --progress-num=1,2,3,4,5,6 "Built target BlackJackGUI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8 "Built target BlackJackGUI"
 .PHONY : CMakeFiles/BlackJackGUI.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BlackJackGUI.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles" 6
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BlackJackGUI.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" 0
 .PHONY : CMakeFiles/BlackJackGUI.dir/rule
 
 # Convenience name for target.
@@ -102,7 +102,7 @@ BlackJackGUI: CMakeFiles/BlackJackGUI.dir/rule
 # codegen rule for target.
 CMakeFiles/BlackJackGUI.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BlackJackGUI.dir/build.make CMakeFiles/BlackJackGUI.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles" --progress-num=1,2,3,4,5,6 "Finished codegen for target BlackJackGUI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8 "Finished codegen for target BlackJackGUI"
 .PHONY : CMakeFiles/BlackJackGUI.dir/codegen
 
 # clean rule for target.

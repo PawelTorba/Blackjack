@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack"
+CMAKE_SOURCE_DIR = "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build"
+CMAKE_BINARY_DIR = "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles" "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,30 @@ card.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BlackJackGUI.dir/build.make CMakeFiles/BlackJackGUI.dir/card.cpp.s
 .PHONY : card.cpp.s
 
+database.o: database.cpp.o
+.PHONY : database.o
+
+# target to build an object file
+database.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BlackJackGUI.dir/build.make CMakeFiles/BlackJackGUI.dir/database.cpp.o
+.PHONY : database.cpp.o
+
+database.i: database.cpp.i
+.PHONY : database.i
+
+# target to preprocess a source file
+database.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BlackJackGUI.dir/build.make CMakeFiles/BlackJackGUI.dir/database.cpp.i
+.PHONY : database.cpp.i
+
+database.s: database.cpp.s
+.PHONY : database.s
+
+# target to generate assembly for a file
+database.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BlackJackGUI.dir/build.make CMakeFiles/BlackJackGUI.dir/database.cpp.s
+.PHONY : database.cpp.s
+
 dealer.o: dealer.cpp.o
 .PHONY : dealer.o
 
@@ -200,6 +224,30 @@ deck.s: deck.cpp.s
 deck.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BlackJackGUI.dir/build.make CMakeFiles/BlackJackGUI.dir/deck.cpp.s
 .PHONY : deck.cpp.s
+
+game.o: game.cpp.o
+.PHONY : game.o
+
+# target to build an object file
+game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BlackJackGUI.dir/build.make CMakeFiles/BlackJackGUI.dir/game.cpp.o
+.PHONY : game.cpp.o
+
+game.i: game.cpp.i
+.PHONY : game.i
+
+# target to preprocess a source file
+game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BlackJackGUI.dir/build.make CMakeFiles/BlackJackGUI.dir/game.cpp.i
+.PHONY : game.cpp.i
+
+game.s: game.cpp.s
+.PHONY : game.s
+
+# target to generate assembly for a file
+game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BlackJackGUI.dir/build.make CMakeFiles/BlackJackGUI.dir/game.cpp.s
+.PHONY : game.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -261,12 +309,18 @@ help:
 	@echo "... card.o"
 	@echo "... card.i"
 	@echo "... card.s"
+	@echo "... database.o"
+	@echo "... database.i"
+	@echo "... database.s"
 	@echo "... dealer.o"
 	@echo "... dealer.i"
 	@echo "... dealer.s"
 	@echo "... deck.o"
 	@echo "... deck.i"
 	@echo "... deck.s"
+	@echo "... game.o"
+	@echo "... game.i"
+	@echo "... game.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

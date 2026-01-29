@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack"
+CMAKE_SOURCE_DIR = "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build"
+CMAKE_BINARY_DIR = "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/BlackJackGUI.dir/depend.make
@@ -73,74 +73,102 @@ CMakeFiles/BlackJackGUI.dir/codegen:
 .PHONY : CMakeFiles/BlackJackGUI.dir/codegen
 
 CMakeFiles/BlackJackGUI.dir/main.cpp.o: CMakeFiles/BlackJackGUI.dir/flags.make
-CMakeFiles/BlackJackGUI.dir/main.cpp.o: /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack/main.cpp
+CMakeFiles/BlackJackGUI.dir/main.cpp.o: /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack-main/main.cpp
 CMakeFiles/BlackJackGUI.dir/main.cpp.o: CMakeFiles/BlackJackGUI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BlackJackGUI.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BlackJackGUI.dir/main.cpp.o -MF CMakeFiles/BlackJackGUI.dir/main.cpp.o.d -o CMakeFiles/BlackJackGUI.dir/main.cpp.o -c "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BlackJackGUI.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BlackJackGUI.dir/main.cpp.o -MF CMakeFiles/BlackJackGUI.dir/main.cpp.o.d -o CMakeFiles/BlackJackGUI.dir/main.cpp.o -c "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/main.cpp"
 
 CMakeFiles/BlackJackGUI.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BlackJackGUI.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/main.cpp" > CMakeFiles/BlackJackGUI.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/main.cpp" > CMakeFiles/BlackJackGUI.dir/main.cpp.i
 
 CMakeFiles/BlackJackGUI.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BlackJackGUI.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/main.cpp" -o CMakeFiles/BlackJackGUI.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/main.cpp" -o CMakeFiles/BlackJackGUI.dir/main.cpp.s
 
 CMakeFiles/BlackJackGUI.dir/player.cpp.o: CMakeFiles/BlackJackGUI.dir/flags.make
-CMakeFiles/BlackJackGUI.dir/player.cpp.o: /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack/player.cpp
+CMakeFiles/BlackJackGUI.dir/player.cpp.o: /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack-main/player.cpp
 CMakeFiles/BlackJackGUI.dir/player.cpp.o: CMakeFiles/BlackJackGUI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BlackJackGUI.dir/player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BlackJackGUI.dir/player.cpp.o -MF CMakeFiles/BlackJackGUI.dir/player.cpp.o.d -o CMakeFiles/BlackJackGUI.dir/player.cpp.o -c "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/player.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BlackJackGUI.dir/player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BlackJackGUI.dir/player.cpp.o -MF CMakeFiles/BlackJackGUI.dir/player.cpp.o.d -o CMakeFiles/BlackJackGUI.dir/player.cpp.o -c "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/player.cpp"
 
 CMakeFiles/BlackJackGUI.dir/player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BlackJackGUI.dir/player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/player.cpp" > CMakeFiles/BlackJackGUI.dir/player.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/player.cpp" > CMakeFiles/BlackJackGUI.dir/player.cpp.i
 
 CMakeFiles/BlackJackGUI.dir/player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BlackJackGUI.dir/player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/player.cpp" -o CMakeFiles/BlackJackGUI.dir/player.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/player.cpp" -o CMakeFiles/BlackJackGUI.dir/player.cpp.s
 
 CMakeFiles/BlackJackGUI.dir/dealer.cpp.o: CMakeFiles/BlackJackGUI.dir/flags.make
-CMakeFiles/BlackJackGUI.dir/dealer.cpp.o: /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack/dealer.cpp
+CMakeFiles/BlackJackGUI.dir/dealer.cpp.o: /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack-main/dealer.cpp
 CMakeFiles/BlackJackGUI.dir/dealer.cpp.o: CMakeFiles/BlackJackGUI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BlackJackGUI.dir/dealer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BlackJackGUI.dir/dealer.cpp.o -MF CMakeFiles/BlackJackGUI.dir/dealer.cpp.o.d -o CMakeFiles/BlackJackGUI.dir/dealer.cpp.o -c "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/dealer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BlackJackGUI.dir/dealer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BlackJackGUI.dir/dealer.cpp.o -MF CMakeFiles/BlackJackGUI.dir/dealer.cpp.o.d -o CMakeFiles/BlackJackGUI.dir/dealer.cpp.o -c "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/dealer.cpp"
 
 CMakeFiles/BlackJackGUI.dir/dealer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BlackJackGUI.dir/dealer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/dealer.cpp" > CMakeFiles/BlackJackGUI.dir/dealer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/dealer.cpp" > CMakeFiles/BlackJackGUI.dir/dealer.cpp.i
 
 CMakeFiles/BlackJackGUI.dir/dealer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BlackJackGUI.dir/dealer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/dealer.cpp" -o CMakeFiles/BlackJackGUI.dir/dealer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/dealer.cpp" -o CMakeFiles/BlackJackGUI.dir/dealer.cpp.s
 
 CMakeFiles/BlackJackGUI.dir/card.cpp.o: CMakeFiles/BlackJackGUI.dir/flags.make
-CMakeFiles/BlackJackGUI.dir/card.cpp.o: /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack/card.cpp
+CMakeFiles/BlackJackGUI.dir/card.cpp.o: /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack-main/card.cpp
 CMakeFiles/BlackJackGUI.dir/card.cpp.o: CMakeFiles/BlackJackGUI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BlackJackGUI.dir/card.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BlackJackGUI.dir/card.cpp.o -MF CMakeFiles/BlackJackGUI.dir/card.cpp.o.d -o CMakeFiles/BlackJackGUI.dir/card.cpp.o -c "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/card.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BlackJackGUI.dir/card.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BlackJackGUI.dir/card.cpp.o -MF CMakeFiles/BlackJackGUI.dir/card.cpp.o.d -o CMakeFiles/BlackJackGUI.dir/card.cpp.o -c "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/card.cpp"
 
 CMakeFiles/BlackJackGUI.dir/card.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BlackJackGUI.dir/card.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/card.cpp" > CMakeFiles/BlackJackGUI.dir/card.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/card.cpp" > CMakeFiles/BlackJackGUI.dir/card.cpp.i
 
 CMakeFiles/BlackJackGUI.dir/card.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BlackJackGUI.dir/card.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/card.cpp" -o CMakeFiles/BlackJackGUI.dir/card.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/card.cpp" -o CMakeFiles/BlackJackGUI.dir/card.cpp.s
 
 CMakeFiles/BlackJackGUI.dir/deck.cpp.o: CMakeFiles/BlackJackGUI.dir/flags.make
-CMakeFiles/BlackJackGUI.dir/deck.cpp.o: /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack/deck.cpp
+CMakeFiles/BlackJackGUI.dir/deck.cpp.o: /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack-main/deck.cpp
 CMakeFiles/BlackJackGUI.dir/deck.cpp.o: CMakeFiles/BlackJackGUI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BlackJackGUI.dir/deck.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BlackJackGUI.dir/deck.cpp.o -MF CMakeFiles/BlackJackGUI.dir/deck.cpp.o.d -o CMakeFiles/BlackJackGUI.dir/deck.cpp.o -c "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/deck.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BlackJackGUI.dir/deck.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BlackJackGUI.dir/deck.cpp.o -MF CMakeFiles/BlackJackGUI.dir/deck.cpp.o.d -o CMakeFiles/BlackJackGUI.dir/deck.cpp.o -c "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/deck.cpp"
 
 CMakeFiles/BlackJackGUI.dir/deck.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BlackJackGUI.dir/deck.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/deck.cpp" > CMakeFiles/BlackJackGUI.dir/deck.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/deck.cpp" > CMakeFiles/BlackJackGUI.dir/deck.cpp.i
 
 CMakeFiles/BlackJackGUI.dir/deck.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BlackJackGUI.dir/deck.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/deck.cpp" -o CMakeFiles/BlackJackGUI.dir/deck.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/deck.cpp" -o CMakeFiles/BlackJackGUI.dir/deck.cpp.s
+
+CMakeFiles/BlackJackGUI.dir/game.cpp.o: CMakeFiles/BlackJackGUI.dir/flags.make
+CMakeFiles/BlackJackGUI.dir/game.cpp.o: /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack-main/game.cpp
+CMakeFiles/BlackJackGUI.dir/game.cpp.o: CMakeFiles/BlackJackGUI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BlackJackGUI.dir/game.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BlackJackGUI.dir/game.cpp.o -MF CMakeFiles/BlackJackGUI.dir/game.cpp.o.d -o CMakeFiles/BlackJackGUI.dir/game.cpp.o -c "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/game.cpp"
+
+CMakeFiles/BlackJackGUI.dir/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BlackJackGUI.dir/game.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/game.cpp" > CMakeFiles/BlackJackGUI.dir/game.cpp.i
+
+CMakeFiles/BlackJackGUI.dir/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BlackJackGUI.dir/game.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/game.cpp" -o CMakeFiles/BlackJackGUI.dir/game.cpp.s
+
+CMakeFiles/BlackJackGUI.dir/database.cpp.o: CMakeFiles/BlackJackGUI.dir/flags.make
+CMakeFiles/BlackJackGUI.dir/database.cpp.o: /home/gonsematek/Studia/SEMESTR\ 5/CPP/Blackjack-main/database.cpp
+CMakeFiles/BlackJackGUI.dir/database.cpp.o: CMakeFiles/BlackJackGUI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BlackJackGUI.dir/database.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BlackJackGUI.dir/database.cpp.o -MF CMakeFiles/BlackJackGUI.dir/database.cpp.o.d -o CMakeFiles/BlackJackGUI.dir/database.cpp.o -c "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/database.cpp"
+
+CMakeFiles/BlackJackGUI.dir/database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BlackJackGUI.dir/database.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/database.cpp" > CMakeFiles/BlackJackGUI.dir/database.cpp.i
+
+CMakeFiles/BlackJackGUI.dir/database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BlackJackGUI.dir/database.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/database.cpp" -o CMakeFiles/BlackJackGUI.dir/database.cpp.s
 
 # Object files for target BlackJackGUI
 BlackJackGUI_OBJECTS = \
@@ -148,7 +176,9 @@ BlackJackGUI_OBJECTS = \
 "CMakeFiles/BlackJackGUI.dir/player.cpp.o" \
 "CMakeFiles/BlackJackGUI.dir/dealer.cpp.o" \
 "CMakeFiles/BlackJackGUI.dir/card.cpp.o" \
-"CMakeFiles/BlackJackGUI.dir/deck.cpp.o"
+"CMakeFiles/BlackJackGUI.dir/deck.cpp.o" \
+"CMakeFiles/BlackJackGUI.dir/game.cpp.o" \
+"CMakeFiles/BlackJackGUI.dir/database.cpp.o"
 
 # External object files for target BlackJackGUI
 BlackJackGUI_EXTERNAL_OBJECTS =
@@ -158,13 +188,15 @@ BlackJackGUI: CMakeFiles/BlackJackGUI.dir/player.cpp.o
 BlackJackGUI: CMakeFiles/BlackJackGUI.dir/dealer.cpp.o
 BlackJackGUI: CMakeFiles/BlackJackGUI.dir/card.cpp.o
 BlackJackGUI: CMakeFiles/BlackJackGUI.dir/deck.cpp.o
+BlackJackGUI: CMakeFiles/BlackJackGUI.dir/game.cpp.o
+BlackJackGUI: CMakeFiles/BlackJackGUI.dir/database.cpp.o
 BlackJackGUI: CMakeFiles/BlackJackGUI.dir/build.make
 BlackJackGUI: CMakeFiles/BlackJackGUI.dir/compiler_depend.ts
 BlackJackGUI: /usr/lib/libsfml-graphics.so.3.0.2
 BlackJackGUI: /usr/lib/libsfml-window.so.3.0.2
 BlackJackGUI: /usr/lib/libsfml-system.so.3.0.2
 BlackJackGUI: CMakeFiles/BlackJackGUI.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable BlackJackGUI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable BlackJackGUI"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BlackJackGUI.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -176,6 +208,6 @@ CMakeFiles/BlackJackGUI.dir/clean:
 .PHONY : CMakeFiles/BlackJackGUI.dir/clean
 
 CMakeFiles/BlackJackGUI.dir/depend:
-	cd "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack" "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack" "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build" "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build" "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/build/CMakeFiles/BlackJackGUI.dir/DependInfo.cmake" "--color=$(COLOR)" BlackJackGUI
+	cd "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main" "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main" "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build" "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build" "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/build/CMakeFiles/BlackJackGUI.dir/DependInfo.cmake" "--color=$(COLOR)" BlackJackGUI
 .PHONY : CMakeFiles/BlackJackGUI.dir/depend
 

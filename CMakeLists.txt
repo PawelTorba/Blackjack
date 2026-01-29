@@ -13,6 +13,7 @@ add_executable(BlackJackGUI
     card.cpp
     deck.cpp
     game.cpp
+    database.cpp
 )
 
 target_link_libraries(BlackJackGUI
@@ -20,4 +21,5 @@ target_link_libraries(BlackJackGUI
         SFML::Graphics
         SFML::Window
         SFML::System
+        sqlite3
 )

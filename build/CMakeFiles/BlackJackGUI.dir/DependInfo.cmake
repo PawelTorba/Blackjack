@@ -8,11 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/card.cpp" "CMakeFiles/BlackJackGUI.dir/card.cpp.o" "gcc" "CMakeFiles/BlackJackGUI.dir/card.cpp.o.d"
-  "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/dealer.cpp" "CMakeFiles/BlackJackGUI.dir/dealer.cpp.o" "gcc" "CMakeFiles/BlackJackGUI.dir/dealer.cpp.o.d"
-  "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/deck.cpp" "CMakeFiles/BlackJackGUI.dir/deck.cpp.o" "gcc" "CMakeFiles/BlackJackGUI.dir/deck.cpp.o.d"
-  "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/main.cpp" "CMakeFiles/BlackJackGUI.dir/main.cpp.o" "gcc" "CMakeFiles/BlackJackGUI.dir/main.cpp.o.d"
-  "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack/player.cpp" "CMakeFiles/BlackJackGUI.dir/player.cpp.o" "gcc" "CMakeFiles/BlackJackGUI.dir/player.cpp.o.d"
+  "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/card.cpp" "CMakeFiles/BlackJackGUI.dir/card.cpp.o" "gcc" "CMakeFiles/BlackJackGUI.dir/card.cpp.o.d"
+  "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/database.cpp" "CMakeFiles/BlackJackGUI.dir/database.cpp.o" "gcc" "CMakeFiles/BlackJackGUI.dir/database.cpp.o.d"
+  "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/dealer.cpp" "CMakeFiles/BlackJackGUI.dir/dealer.cpp.o" "gcc" "CMakeFiles/BlackJackGUI.dir/dealer.cpp.o.d"
+  "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/deck.cpp" "CMakeFiles/BlackJackGUI.dir/deck.cpp.o" "gcc" "CMakeFiles/BlackJackGUI.dir/deck.cpp.o.d"
+  "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/game.cpp" "CMakeFiles/BlackJackGUI.dir/game.cpp.o" "gcc" "CMakeFiles/BlackJackGUI.dir/game.cpp.o.d"
+  "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/main.cpp" "CMakeFiles/BlackJackGUI.dir/main.cpp.o" "gcc" "CMakeFiles/BlackJackGUI.dir/main.cpp.o.d"
+  "/home/gonsematek/Studia/SEMESTR 5/CPP/Blackjack-main/player.cpp" "CMakeFiles/BlackJackGUI.dir/player.cpp.o" "gcc" "CMakeFiles/BlackJackGUI.dir/player.cpp.o.d"
   "" "BlackJackGUI" "gcc" "CMakeFiles/BlackJackGUI.dir/link.d"
   )
 

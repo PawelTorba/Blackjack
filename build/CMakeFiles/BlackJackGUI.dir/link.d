@@ -7,9 +7,12 @@ BlackJackGUI: \
   CMakeFiles/BlackJackGUI.dir/dealer.cpp.o \
   CMakeFiles/BlackJackGUI.dir/card.cpp.o \
   CMakeFiles/BlackJackGUI.dir/deck.cpp.o \
+  CMakeFiles/BlackJackGUI.dir/game.cpp.o \
+  CMakeFiles/BlackJackGUI.dir/database.cpp.o \
   /usr/lib/libsfml-graphics.so.3.0.2 \
   /usr/lib/libsfml-window.so.3.0.2 \
   /usr/lib/libsfml-system.so.3.0.2 \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libsqlite3.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
@@ -84,11 +87,17 @@ CMakeFiles/BlackJackGUI.dir/card.cpp.o:
 
 CMakeFiles/BlackJackGUI.dir/deck.cpp.o:
 
+CMakeFiles/BlackJackGUI.dir/game.cpp.o:
+
+CMakeFiles/BlackJackGUI.dir/database.cpp.o:
+
 /usr/lib/libsfml-graphics.so.3.0.2:
 
 /usr/lib/libsfml-window.so.3.0.2:
 
 /usr/lib/libsfml-system.so.3.0.2:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libsqlite3.so:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so:
 
