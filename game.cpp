@@ -107,3 +107,22 @@ void Game::startNewGame() {
     player.update_balance(1000 - player.get_balance()); 
     gameId = database.createGameSession();
 }
+
+void Game::startStatsThread() {
+    statsReady = false;
+
+    statsThread = std::thread([this]() {
+        Stats s = database.getStats();
+
+        std::lock_guard<std::mutex> lock(statsMutex);
+        cachedStats = s;
+        statsReady = true;
+    });
+
+    statsThread.detach();
+}
+
+Stats Game::getCachedStats() {
+    std::lock_guard<std::mutex> lock(statsMutex);
+    return cachedStats;
+}

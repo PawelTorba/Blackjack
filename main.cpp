@@ -148,24 +148,23 @@ void main_menu(Game& game) {
             break;
         }
 
-        case 3: {
-            auto stats = game.getDatabase().getStats();
+        case 3:
+            game.startStatsThread();
+            std::cout << "Liczenie statystyk w tle...\n";
 
-            std::cout << "\n=== STATYSTYKI ===\n";
+            std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
-            if (stats.gamesCount == 0) {
-                std::cout << "Brak danych statystycznych.\n";
-                break;
+            {
+                auto stats = game.getCachedStats();
+
+                std::cout << "\n=== STATYSTYKI ===\n";
+                std::cout << "Liczba gier: " << stats.gamesCount << "\n";
+                std::cout << "Liczba rund: " << stats.roundsCount << "\n";
+                std::cout << "Najlepsze saldo: " << stats.maxBalance << "\n";
+                std::cout << "Najgorsze saldo: " << stats.minBalance << "\n";
+                std::cout << "Winrate: " << stats.winRate << "%\n";
             }
-
-            std::cout << "Liczba gier: " << stats.gamesCount << "\n";
-            std::cout << "Liczba rund: " << stats.roundsCount << "\n";
-            std::cout << "Najlepsze saldo: " << stats.maxBalance << "\n";
-            std::cout << "Najgorsze saldo: " << stats.minBalance << "\n";
-            std::cout << "Winrate: " << stats.winRate << "%\n";
-
             break;
-        }
 
         case 4:
             std::cout << "\n[Eksport danych] — w trakcie implementacji.\n";

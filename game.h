@@ -5,6 +5,8 @@
 #include "player.h"
 #include "dealer.h"
 #include "database.h"
+#include <thread>
+#include <mutex>
 
 class Game {
 private:
@@ -15,6 +17,11 @@ private:
     int gameId;
     int roundCounter;
 
+    Stats cachedStats;
+    std::thread statsThread;
+    std::mutex statsMutex;
+    bool statsReady;
+
 public:
     Game();
     void main_loop();
@@ -22,6 +29,8 @@ public:
     Database& getDatabase();
     void finishSession();
     void startNewGame();
+    void startStatsThread();
+    Stats getCachedStats();
 };
 
 
