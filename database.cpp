@@ -224,3 +224,22 @@ std::vector<GameSessionInfo> Database::getGameHistorySorted(
     sqlite3_finalize(stmt);
     return history;
 }
+
+bool Database::updateRoundResult(int gameId, int roundNumber, int newResult) {
+    std::string sql =
+        "UPDATE round SET result = " + std::to_string(newResult) +
+        " WHERE game_id = " + std::to_string(gameId) +
+        " AND round_number = " + std::to_string(roundNumber) + ";";
+
+    return sqlite3_exec(db, sql.c_str(), nullptr, nullptr, nullptr) == SQLITE_OK;
+}
+
+bool Database::addManualRound(int gameId, int roundNumber, int result) {
+    std::string sql =
+        "INSERT INTO round (game_id, round_number, result) VALUES (" +
+        std::to_string(gameId) + ", " +
+        std::to_string(roundNumber) + ", " +
+        std::to_string(result) + ");";
+
+    return sqlite3_exec(db, sql.c_str(), nullptr, nullptr, nullptr) == SQLITE_OK;
+}

@@ -35,6 +35,9 @@ public:
     int createGameSession();
     void finishGameSession(int gameId, int roundsCount, int balance);
 
+    bool updateRoundResult(int gameId, int roundNumber, int newResult);
+    bool addManualRound(int gameId, int roundNumber, int result);   
+
     std::vector<GameSessionInfo> getGameHistory();
     std::vector<RoundInfo> getRoundsForGame(int gameId);
     std::vector<GameSessionInfo> getGameHistorySorted(
